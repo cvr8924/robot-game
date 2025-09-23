@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://boxnfi65tmbmn"]
+
+[ext_resource type="Script" uid="uid://bnx35cx30uji6" path="res://push_block_generic.gd" id="1_cdv75"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_o7rrm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cdv75"]
+size = Vector2(2, 2)
+
+[node name="PushBlockGeneric" type="CharacterBody2D"]
+script = ExtResource("1_cdv75")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+scale = Vector2(16, 16)
+texture = SubResource("PlaceholderTexture2D_o7rrm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+scale = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_cdv75")

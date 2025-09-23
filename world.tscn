@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://crqbslqa43w5"]
+
+[ext_resource type="Script" uid="uid://peomc8rhtn2p" path="res://world.gd" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://b75lc62e8tfah" path="res://player.tscn" id="2_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://boxnfi65tmbmn" path="res://push_block_generic.tscn" id="3_tlwt5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fj7yv"]
+size = Vector2(34, 10)
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_f3sb7")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(24, 0, 24, 104, 80, 104, 104, 128, 144, 128, 144, 104, 176, 104, 176, 128, 216, 128, 240, 160, 288, 160, 288, 136, 312, 136, 312, 0, 336, 0, 336, 200, -8, 192, -8, 0)
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D"]
+
+[node name="Player" parent="." instance=ExtResource("2_fj7yv")]
+position = Vector2(56, 56)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(127, 123)
+shape = SubResource("RectangleShape2D_fj7yv")
+
+[node name="PushBlockGeneric" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(208, 88)
+
+[connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
