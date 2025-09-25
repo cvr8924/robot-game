@@ -8,13 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cdv75"]
 size = Vector2(1.9329445, 1.9416125)
 
-[node name="PushBlockGeneric" type="RigidBody2D" groups=["Pushable"]]
-collision_layer = 5
-collision_mask = 5
-can_sleep = false
-lock_rotation = true
-contact_monitor = true
-max_contacts_reported = 8
+[node name="PushBlockGeneric" type="CharacterBody2D" groups=["Pushable"]]
 script = ExtResource("1_cdv75")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

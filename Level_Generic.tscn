@@ -9,12 +9,6 @@ script = ExtResource("1_ljhsb")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_mask = 0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2(-1, 0)
-polygon = PackedVector2Array(24, 0, 24, 104, 80, 104, 104, 128, 145, 128, 145, 72, 177, 72, 177, 128, 216, 128, 264, 128, 288, 128, 288, 168, 312, 168, 312, 0, 336, 0, 336, 200, -8, 192, -8, 0)
-
-[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D"]
-
 [node name="Player" parent="." instance=ExtResource("2_8dpgk")]
 top_level = true
 position = Vector2(56, 56)

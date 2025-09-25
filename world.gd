@@ -1,6 +1,6 @@
 extends Node
 
-
+@export var next_screen: PackedScene
 
 @onready var colision_poly_2d = $StaticBody2D/CollisionPolygon2D
 @onready var polygon_2d: Polygon2D = $StaticBody2D/CollisionPolygon2D/Polygon2D
