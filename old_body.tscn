@@ -1,19 +1,36 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0hj0ni7pb4b1"]
+[gd_scene load_steps=6 format=3 uid="uid://d0hj0ni7pb4b1"]
 
+[ext_resource type="Script" uid="uid://ypw83qgsye6u" path="res://old_body.gd" id="1_hilrp"]
 [ext_resource type="Texture2D" uid="uid://bj3x2xic287pc" path="res://OldBodyTest.png" id="1_xtafi"]
+[ext_resource type="Script" uid="uid://w5dyn1v0hhcx" path="res://Hurtbox.gd" id="3_kqrxv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wtqip"]
 size = Vector2(21.357735, 16.36502)
 
-[node name="Old_Body" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_va6qb"]
+size = Vector2(2.5, 1.875)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(12.215063, 13.912563)
-shape = SubResource("RectangleShape2D_wtqip")
+[node name="Old_Body" type="RigidBody2D" groups=["Pushable"]]
+lock_rotation = true
+script = ExtResource("1_hilrp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(12.10447, 12.0625)
+position = Vector2(10.648261, -17.616428)
 scale = Vector2(0.04692517, 0.049024638)
 texture = ExtResource("1_xtafi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10.758854, -15.766368)
+shape = SubResource("RectangleShape2D_wtqip")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("3_kqrxv")
+metadata/_custom_type_script = "uid://w5dyn1v0hhcx"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(11, -15.5)
+scale = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_va6qb")
+debug_color = Color(0.74780536, 0.20606259, 0.99999994, 0.41960785)

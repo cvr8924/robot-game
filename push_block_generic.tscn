@@ -1,13 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://boxnfi65tmbmn"]
+[gd_scene load_steps=5 format=3 uid="uid://boxnfi65tmbmn"]
 
-[ext_resource type="Script" uid="uid://bnx35cx30uji6" path="res://push_block_generic.gd" id="1_cdv75"]
+[ext_resource type="Script" uid="uid://hei6fuh6577t" path="res://push_block_generic.gd" id="1_cdv75"]
+[ext_resource type="Script" uid="uid://w5dyn1v0hhcx" path="res://Hurtbox.gd" id="2_ptpun"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_o7rrm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cdv75"]
-size = Vector2(2, 2)
+size = Vector2(1.9329445, 1.9416125)
 
-[node name="PushBlockGeneric" type="CharacterBody2D"]
+[node name="PushBlockGeneric" type="RigidBody2D" groups=["Pushable"]]
+can_sleep = false
+lock_rotation = true
 script = ExtResource("1_cdv75")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -15,7 +18,19 @@ position = Vector2(8, 8)
 scale = Vector2(16, 16)
 texture = SubResource("PlaceholderTexture2D_o7rrm")
 
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("2_ptpun")
+metadata/_custom_type_script = "uid://w5dyn1v0hhcx"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(7.9806986, 8.018641)
+scale = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_cdv75")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(8, 8)
 scale = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_cdv75")

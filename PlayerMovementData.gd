@@ -5,3 +5,5 @@ extends Resource
 @export var Acceleration = 800
 @export var Friction = 1000
 @export var Jump_Velocity = -300.0
+@export var Push_Force = 30.0
+@export var Max_Push_Velocity = 50
