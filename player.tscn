@@ -239,3 +239,6 @@ debug_color = Color(0.7156389, 0.4815473, 0.096142896, 0.41960785)
 libraries = {
 &"": SubResource("AnimationLibrary_1jxqw")
 }
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(8.867916, 5.6247826)

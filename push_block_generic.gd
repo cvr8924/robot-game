@@ -17,6 +17,7 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	#linear_velocity.y = move_toward(linear_velocity.y,0,0)
 	
 	#for body in get_colliding_bodies():
 	#	#print("Hello World")

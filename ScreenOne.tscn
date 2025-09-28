@@ -1,11 +1,102 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjwcni7px47rx"]
+[gd_scene load_steps=3 format=3 uid="uid://cjwcni7px47rx"]
 
 [ext_resource type="PackedScene" uid="uid://cmb1o47l73yc6" path="res://Level_Generic.tscn" id="1_yllje"]
+[ext_resource type="PackedScene" uid="uid://boxnfi65tmbmn" path="res://push_block_generic.tscn" id="2_pbxmf"]
 
 [node name="World" instance=ExtResource("1_yllje")]
 
+[node name="PushBlockGeneric13" parent="." index="0" instance=ExtResource("2_pbxmf")]
+position = Vector2(160, 160)
+
+[node name="PushBlockGeneric14" parent="." index="1" instance=ExtResource("2_pbxmf")]
+position = Vector2(160, 144)
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 position = Vector2(-1, 0)
-polygon = PackedVector2Array(24, 0, 24, 104, 80, 104, 104, 128, 145, 128, 153, 128, 169, 128, 177, 128, 216, 128, 264, 128, 288, 128, 288, 168, 312, 168, 312, 0, 336, 0, 336, 200, -8, 192, -8, 0)
+polygon = PackedVector2Array(1, -32, 1, 224, 617, 224, 617, -8, 577, -8, 577, 88, 601, 88, 601, 128, 577, 128, 577, 176, 113, 176, 113, 104, 113, 72, 17, 72, 17, 40, 169, 40, 169, -32)
 
 [node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D" index="0"]
+
+[node name="Player" parent="." index="3"]
+position = Vector2(24, 48)
+
+[node name="PushBlockGeneric" parent="." index="4" instance=ExtResource("2_pbxmf")]
+position = Vector2(112, 160)
+
+[node name="PushBlockGeneric2" parent="." index="5" instance=ExtResource("2_pbxmf")]
+position = Vector2(112, 144)
+
+[node name="PushBlockGeneric3" parent="." index="6" instance=ExtResource("2_pbxmf")]
+position = Vector2(112, 128)
+
+[node name="PushBlockGeneric4" parent="." index="7" instance=ExtResource("2_pbxmf")]
+position = Vector2(112, 112)
+
+[node name="PushBlockGeneric5" parent="." index="8" instance=ExtResource("2_pbxmf")]
+position = Vector2(112, 96)
+
+[node name="PushBlockGeneric6" parent="." index="9" instance=ExtResource("2_pbxmf")]
+position = Vector2(128, 160)
+
+[node name="PushBlockGeneric7" parent="." index="10" instance=ExtResource("2_pbxmf")]
+position = Vector2(128, 144)
+
+[node name="PushBlockGeneric8" parent="." index="11" instance=ExtResource("2_pbxmf")]
+position = Vector2(128, 128)
+
+[node name="PushBlockGeneric9" parent="." index="12" instance=ExtResource("2_pbxmf")]
+position = Vector2(128, 112)
+
+[node name="PushBlockGeneric10" parent="." index="13" instance=ExtResource("2_pbxmf")]
+position = Vector2(144, 160)
+
+[node name="PushBlockGeneric11" parent="." index="14" instance=ExtResource("2_pbxmf")]
+position = Vector2(144, 144)
+
+[node name="PushBlockGeneric12" parent="." index="15" instance=ExtResource("2_pbxmf")]
+position = Vector2(144, 128)
+
+[node name="PushBlockGeneric15" parent="." index="16" instance=ExtResource("2_pbxmf")]
+position = Vector2(176, 160)
+
+[node name="PushBlockGeneric16" parent="." index="17" instance=ExtResource("2_pbxmf")]
+position = Vector2(96, 56)
+
+[node name="PushBlockGeneric17" parent="." index="18" instance=ExtResource("2_pbxmf")]
+position = Vector2(96, 40)
+
+[node name="PushBlockGeneric18" parent="." index="19" instance=ExtResource("2_pbxmf")]
+position = Vector2(376, 160)
+
+[node name="PushBlockGeneric19" parent="." index="20" instance=ExtResource("2_pbxmf")]
+position = Vector2(376, 144)
+
+[node name="PushBlockGeneric20" parent="." index="21" instance=ExtResource("2_pbxmf")]
+position = Vector2(440, 160)
+
+[node name="PushBlockGeneric21" parent="." index="22" instance=ExtResource("2_pbxmf")]
+position = Vector2(440, 144)
+
+[node name="PushBlockGeneric22" parent="." index="23" instance=ExtResource("2_pbxmf")]
+position = Vector2(512, 160)
+
+[node name="PushBlockGeneric23" parent="." index="24" instance=ExtResource("2_pbxmf")]
+position = Vector2(512, 144)
+
+[node name="PushBlockGeneric24" parent="." index="25" instance=ExtResource("2_pbxmf")]
+position = Vector2(560, 160)
+
+[node name="PushBlockGeneric25" parent="." index="26" instance=ExtResource("2_pbxmf")]
+position = Vector2(560, 144)
+
+[node name="PushBlockGeneric26" parent="." index="27" instance=ExtResource("2_pbxmf")]
+position = Vector2(560, 128)
+
+[node name="PushBlockGeneric27" parent="." index="28" instance=ExtResource("2_pbxmf")]
+position = Vector2(376, 128)
+
+[node name="PushBlockGeneric28" parent="." index="29" instance=ExtResource("2_pbxmf")]
+position = Vector2(440, 128)
+
+[node name="PushBlockGeneric29" parent="." index="30" instance=ExtResource("2_pbxmf")]
+position = Vector2(512, 128)

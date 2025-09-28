@@ -37,6 +37,9 @@ func _physics_process(delta: float) -> void:
 		if collision_obj != null:
 			if collision_obj.is_in_group("Pushable") and abs(collision_obj.get_linear_velocity().x) < movement_data.Max_Push_Velocity:
 				collision_obj.apply_central_impulse(collision.get_normal() * -movement_data.Push_Force)
+				box_recursion_thing(collision_obj, (collision.get_normal() * -movement_data.Push_Force))
+		
+		
 	
 	
 	var wasOnFloor = is_on_floor()
@@ -104,3 +107,13 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func debug_die():
 	if Input.is_action_just_pressed("Debug_Button"):
 		die()
+
+func box_recursion_thing(collision_obj, impulse):
+	for item in collision_obj.get_colliding_bodies():
+		if item is RigidBody2D and item.is_in_group("Pushable") and item.global_position.y <= collision_obj.global_position.y:
+			item.apply_central_impulse(impulse)
+			#box_recursion_thing()
+			
+			
+	
+	

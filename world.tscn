@@ -15,7 +15,7 @@ collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(-1, 0)
-polygon = PackedVector2Array(24, 0, 24, 104, 80, 104, 104, 128, 145, 128, 145, 72, 177, 72, 177, 128, 216, 128, 264, 128, 288, 128, 288, 168, 312, 168, 312, 0, 336, 0, 336, 200, -8, 192, -8, 0)
+polygon = PackedVector2Array(24, 0, 24, 104, 80, 104, 104, 128, 145, 128, 145, 72, 177, 72, 177, 112, 177, 128, 289, 128, 289, 144, 288, 168, 312, 168, 312, 0, 336, 0, 336, 200, -8, 192, -8, 0)
 
 [node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D"]
 
@@ -30,12 +30,16 @@ position = Vector2(127, 123)
 shape = SubResource("RectangleShape2D_fj7yv")
 
 [node name="PushBlockGeneric" parent="." instance=ExtResource("3_tlwt5")]
-position = Vector2(224, 104)
+position = Vector2(296, 136)
+mass = 2.5
 
 [node name="PushBlockGeneric2" parent="." instance=ExtResource("3_tlwt5")]
-position = Vector2(224, 56)
+position = Vector2(208, 96)
 
 [node name="PushBlockGeneric3" parent="." instance=ExtResource("3_tlwt5")]
-position = Vector2(224, 80)
+position = Vector2(232, 112)
+
+[node name="PushBlockGeneric4" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(288, 104)
 
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
