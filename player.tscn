@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b75lc62e8tfah"]
+[gd_scene load_steps=25 format=3 uid="uid://b75lc62e8tfah"]
 
 [ext_resource type="Script" uid="uid://dco12sn18mx3w" path="res://player.gd" id="1_onrkg"]
 [ext_resource type="Resource" uid="uid://lgfv5cq42ivt" path="res://DefaultMovementData.tres" id="2_i3pqv"]
@@ -184,9 +184,11 @@ _data = {
 &"RESET": SubResource("Animation_2hs0m")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sweqy"]
+size = Vector2(25.658274, 19.926586)
+
 [node name="Player" type="CharacterBody2D"]
-collision_layer = 19
-collision_mask = 17
+collision_layer = 3
 floor_constant_speed = true
 floor_snap_length = 2.0
 script = ExtResource("1_onrkg")
@@ -243,3 +245,12 @@ libraries = {
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(8.867916, 5.6247826)
+
+[node name="DialogueInteractBox" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueInteractBox"]
+visible = false
+position = Vector2(8.520621, 9.654369)
+shape = SubResource("RectangleShape2D_sweqy")
