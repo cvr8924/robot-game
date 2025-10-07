@@ -46,6 +46,7 @@ Debug_Button={
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Box Collisions"
 2d_physics/layer_4="Hit/Hurt"
+2d_physics/layer_5="Dialogue"
 
 [rendering]
 

@@ -11,11 +11,11 @@ position = Vector2(160, 160)
 [node name="PushBlockGeneric14" parent="." index="1" instance=ExtResource("2_pbxmf")]
 position = Vector2(160, 144)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 position = Vector2(-1, 0)
 polygon = PackedVector2Array(1, -32, 1, 224, 617, 224, 617, -8, 577, -8, 577, 88, 601, 88, 601, 128, 577, 128, 577, 176, 113, 176, 113, 104, 113, 72, 17, 72, 17, 40, 169, 40, 169, -32)
 
-[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D" index="0"]
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D2" index="0"]
 
 [node name="Player" parent="." index="3"]
 position = Vector2(24, 48)

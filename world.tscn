@@ -21,7 +21,7 @@ polygon = PackedVector2Array(24, 0, 24, 104, 80, 104, 104, 128, 145, 128, 145, 7
 
 [node name="Player" parent="." instance=ExtResource("2_fj7yv")]
 top_level = true
-position = Vector2(56, 56)
+position = Vector2(56, 72)
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -34,12 +34,12 @@ position = Vector2(296, 136)
 mass = 2.5
 
 [node name="PushBlockGeneric2" parent="." instance=ExtResource("3_tlwt5")]
-position = Vector2(208, 96)
+position = Vector2(248, 112)
 
 [node name="PushBlockGeneric3" parent="." instance=ExtResource("3_tlwt5")]
 position = Vector2(232, 112)
 
 [node name="PushBlockGeneric4" parent="." instance=ExtResource("3_tlwt5")]
-position = Vector2(288, 104)
+position = Vector2(280, 104)
 
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
