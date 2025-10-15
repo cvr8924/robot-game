@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dqfm62ludvvpp" path="res://dialogue_area.gd" id="1_awspb"]
 
-[node name="Area2D" type="Area2D"]
+[node name="Dialogue_Area2D" type="Area2D"]
 process_mode = 3
 collision_layer = 0
 collision_mask = 16

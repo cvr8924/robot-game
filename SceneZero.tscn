@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://7j1ap6bcr745"]
+[gd_scene load_steps=5 format=3 uid="uid://7j1ap6bcr745"]
 
 [ext_resource type="PackedScene" uid="uid://cmb1o47l73yc6" path="res://Level_Generic.tscn" id="1_hdif8"]
+[ext_resource type="PackedScene" uid="uid://bcqqb1lh5irjp" path="res://dialogue_area.tscn" id="2_wkxsh"]
+[ext_resource type="PackedScene" uid="uid://bk1kf5jmx26qr" path="res://dialogue_player.tscn" id="3_fhtx4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhtx4"]
+size = Vector2(50, 42)
 
 [node name="World" instance=ExtResource("1_hdif8")]
 
@@ -9,3 +14,12 @@ polygon = PackedVector2Array(1, 184, 1, 0, 25, 0, 25, 96, 89, 96, 89, 128, 289, 
 
 [node name="Player" parent="." index="1"]
 position = Vector2(48, 80)
+
+[node name="Dialogue_Area2D" parent="." index="2" instance=ExtResource("2_wkxsh")]
+dialog_key = "Intro"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Dialogue_Area2D" index="1"]
+position = Vector2(192, 112)
+shape = SubResource("RectangleShape2D_fhtx4")
+
+[node name="Dialogue_Player" parent="." index="3" instance=ExtResource("3_fhtx4")]
