@@ -1,3 +1,16 @@
 {
-	"Intro":["Hello World","This is a dialogue test"]
+	"Intro": [
+		"Hello World",
+        "This is a dialogue test"
+	],
+	"S0Printer": [
+        "The Printer"
+	],
+	"S0Door": [
+		"This sturdy door has been welded shut.",
+        "It seems you will need to find another way to progress"
+	],
+	"S0Breakable": [
+        "This object seems breakable"
+	]
 }
