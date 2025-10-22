@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://c4cpdfpk2a3m3"]
+
+[ext_resource type="Texture2D" uid="uid://bq132dol7yb6w" path="res://icon.svg" id="1_3qrag"]
+[ext_resource type="Script" uid="uid://c4j4f8xrlct2l" path="res://rat.gd" id="1_p2c4i"]
+[ext_resource type="Script" uid="uid://baaqm0rva0i13" path="res://Hitbox.gd" id="2_4ap6t"]
+[ext_resource type="Script" uid="uid://w5dyn1v0hhcx" path="res://Hurtbox.gd" id="3_8ke84"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ap6t"]
+atlas = ExtResource("1_3qrag")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ke84"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ap6t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p2c4i"]
+radius = 16.0
+height = 32.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p2c4i"]
+size = Vector2(36, 34)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_p2c4i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_8ke84")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_p2c4i")
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("2_4ap6t")
+metadata/_custom_type_script = "uid://baaqm0rva0i13"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
+position = Vector2(-2.3749921, -7.0000033)
+scale = Vector2(0.23437506, 0.25)
+polygon = PackedVector2Array(95.46661, 92.000015, 146.6666, 92.000015, 146.6666, -67.999985, -24.000027, -67.999985, -19.73336, -47.999985, 91.199936, -47.999985)
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("3_8ke84")
+metadata/_custom_type_script = "uid://w5dyn1v0hhcx"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_p2c4i")
+debug_color = Color(0.94851774, 4.7168137e-06, 0.5802884, 0.41960785)

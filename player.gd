@@ -2,19 +2,31 @@ extends CharacterBody2D
 
 
 @export var movement_data : PlayerMovementData
+@export var max_health : int
 @onready var old_body = load("res://old_body.tscn")
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var coyote_timer: Timer = $CoyoteTimer
 @onready var attack_timer: Timer = $AttackTimer
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var hitbox: Hitbox = $Hitbox
+@onready var hurtbox: Hurtbox = $Hurtbox
 
 
+var health
 var startPos : Vector2
 
 func _ready() -> void:
 	startPos = position
+	health = max_health
 	animation_player.play("RESET")
+	#contact_monitor = true
+	hurtbox.hurt.connect(func(other_hitbox: Hitbox):
+		health-=1
+		if health <=0:
+			die()
+	)
+		
+		
 
 func die()-> void:
 	var old_bod = old_body.instantiate()
@@ -22,6 +34,7 @@ func die()-> void:
 	var world = get_tree().current_scene
 	world.add_child(old_bod)
 	position = startPos
+	health = max_health
 
  
 func _physics_process(delta: float) -> void:

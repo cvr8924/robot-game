@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://peomc8rhtn2p" path="res://world.gd" id="1_ljhsb"]
 [ext_resource type="PackedScene" uid="uid://b75lc62e8tfah" path="res://player.tscn" id="2_8dpgk"]
 
-[node name="World" type="Node2D"]
+[node name="world" type="Node2D"]
 script = ExtResource("1_ljhsb")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

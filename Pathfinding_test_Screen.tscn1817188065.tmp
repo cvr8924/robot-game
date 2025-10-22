@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://by1x4jn01avyn"]
+
+[ext_resource type="PackedScene" uid="uid://cmb1o47l73yc6" path="res://Level_Generic.tscn" id="1_2s8k2"]
+[ext_resource type="Script" uid="uid://csw6ntmj358aw" path="res://enemy_ai_node.gd" id="2_6huia"]
+[ext_resource type="Texture2D" uid="uid://bq132dol7yb6w" path="res://icon.svg" id="2_lcnd8"]
+
+[sub_resource type="Curve2D" id="Curve2D_2s8k2"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 136, 152, 0, 0, 0, 0, 288, 152, 0, 0, 0, 0, 136, 152)
+}
+point_count = 3
+
+[node name="Broken sadface" instance=ExtResource("1_2s8k2")]
+
+[node name="Player" parent="." index="1"]
+position = Vector2(16, 144)
+
+[node name="EnemyAINode" type="Node2D" parent="." index="2"]
+script = ExtResource("2_6huia")
+
+[node name="Path2D" type="Path2D" parent="EnemyAINode" index="0"]
+curve = SubResource("Curve2D_2s8k2")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="EnemyAINode/Path2D" index="0"]
+position = Vector2(136, 152)
+rotates = false
+
+[node name="Sprite2D" type="Sprite2D" parent="EnemyAINode/Path2D/PathFollow2D" index="0"]
+position = Vector2(24, 0)
+scale = Vector2(0.24999999, 0.24999999)
+texture = ExtResource("2_lcnd8")
