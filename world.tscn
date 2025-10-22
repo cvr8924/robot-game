@@ -37,7 +37,7 @@ mass = 2.5
 position = Vector2(248, 112)
 
 [node name="PushBlockGeneric3" parent="." instance=ExtResource("3_tlwt5")]
-position = Vector2(232, 112)
+position = Vector2(224, 112)
 
 [node name="PushBlockGeneric4" parent="." instance=ExtResource("3_tlwt5")]
 position = Vector2(280, 104)

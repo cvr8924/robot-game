@@ -46,7 +46,7 @@ metadata/_custom_type_script = "uid://baaqm0rva0i13"
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
 position = Vector2(-2.3749921, -7.0000033)
 scale = Vector2(0.23437506, 0.25)
-polygon = PackedVector2Array(95.46661, 92.000015, 146.6666, 92.000015, 146.6666, -67.999985, -24.000027, -67.999985, -19.73336, -47.999985, 91.199936, -47.999985)
+polygon = PackedVector2Array(-19.73336, 128.00002, 146.6666, 128.00002, 146.6666, -67.999985, -19.73336, -67.999985, -19.73336, -47.999985, 91.199936, -47.999985, 91.199936, 100.000015, -19.73336, 100.000015)
 
 [node name="Hurtbox" type="Area2D" parent="."]
 collision_layer = 8
