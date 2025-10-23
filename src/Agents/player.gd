@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 @export var movement_data : PlayerMovementData
 @export var max_health : int
-@onready var old_body = load("res://old_body.tscn")
+@onready var old_body = load("res://src/Agents/old_body.tscn")
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var coyote_timer: Timer = $CoyoteTimer
 @onready var attack_timer: Timer = $AttackTimer

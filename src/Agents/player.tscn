@@ -1,10 +1,10 @@
 [gd_scene load_steps=27 format=3 uid="uid://b75lc62e8tfah"]
 
-[ext_resource type="Script" uid="uid://dco12sn18mx3w" path="res://player.gd" id="1_onrkg"]
-[ext_resource type="Resource" uid="uid://lgfv5cq42ivt" path="res://DefaultMovementData.tres" id="2_i3pqv"]
-[ext_resource type="Texture2D" uid="uid://dxi7dwr3lbl1a" path="res://Player Sprites 2.png" id="3_i3pqv"]
-[ext_resource type="Script" uid="uid://baaqm0rva0i13" path="res://Hitbox.gd" id="4_hqtel"]
-[ext_resource type="Script" uid="uid://w5dyn1v0hhcx" path="res://Hurtbox.gd" id="5_sweqy"]
+[ext_resource type="Script" uid="uid://dco12sn18mx3w" path="res://src/Agents/player.gd" id="1_onrkg"]
+[ext_resource type="Resource" uid="uid://lgfv5cq42ivt" path="res://src/Agents/DefaultMovementData.tres" id="2_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://dxi7dwr3lbl1a" path="res://assets/Player Sprites 2.png" id="3_i3pqv"]
+[ext_resource type="Script" uid="uid://baaqm0rva0i13" path="res://src/Generics/Hitbox.gd" id="4_hqtel"]
+[ext_resource type="Script" uid="uid://w5dyn1v0hhcx" path="res://src/Generics/Hurtbox.gd" id="5_sweqy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
 size = Vector2(10.501785, 6.533171)

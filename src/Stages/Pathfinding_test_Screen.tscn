@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://by1x4jn01avyn"]
 
-[ext_resource type="PackedScene" uid="uid://cmb1o47l73yc6" path="res://Level_Generic.tscn" id="1_2s8k2"]
-[ext_resource type="Script" uid="uid://csw6ntmj358aw" path="res://enemy_ai_node.gd" id="2_6huia"]
-[ext_resource type="PackedScene" uid="uid://c4cpdfpk2a3m3" path="res://Rat.tscn" id="3_6huia"]
+[ext_resource type="PackedScene" uid="uid://cmb1o47l73yc6" path="res://src/Generics/Level_Generic.tscn" id="1_ysbaw"]
+[ext_resource type="Script" uid="uid://csw6ntmj358aw" path="res://src/Agents/enemy_ai_node.gd" id="2_iihuy"]
+[ext_resource type="PackedScene" uid="uid://c4cpdfpk2a3m3" path="res://src/Agents/Rat.tscn" id="3_f7m0j"]
 
 [sub_resource type="Curve2D" id="Curve2D_2s8k2"]
 _data = {
@@ -10,13 +10,13 @@ _data = {
 }
 point_count = 3
 
-[node name="Broken sadface" instance=ExtResource("1_2s8k2")]
+[node name="Broken sadface" instance=ExtResource("1_ysbaw")]
 
 [node name="Player" parent="." index="1"]
 position = Vector2(16, 144)
 
 [node name="EnemyAINode" type="Node2D" parent="." index="2"]
-script = ExtResource("2_6huia")
+script = ExtResource("2_iihuy")
 
 [node name="Path2D" type="Path2D" parent="EnemyAINode" index="0"]
 curve = SubResource("Curve2D_2s8k2")
@@ -24,4 +24,4 @@ curve = SubResource("Curve2D_2s8k2")
 [node name="PathFollow2D" type="PathFollow2D" parent="EnemyAINode/Path2D" index="0"]
 position = Vector2(136, 152)
 
-[node name="CharacterBody2D" parent="EnemyAINode/Path2D/PathFollow2D" index="0" instance=ExtResource("3_6huia")]
+[node name="CharacterBody2D" parent="EnemyAINode/Path2D/PathFollow2D" index="0" instance=ExtResource("3_f7m0j")]

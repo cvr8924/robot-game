@@ -13,12 +13,12 @@ config_version=5
 config/name="Robot Game"
 run/main_scene="uid://crqbslqa43w5"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/icon.svg"
 
 [autoload]
 
-Events="*res://Events.gd"
-DialogueSignalBus="*res://src/singleton/dialogue_signal_bus.gd"
+Events="*res://src/Singleton/Events.gd"
+DialogueSignalBus="*res://src/Singleton/dialogue_signal_bus.gd"
 
 [display]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bk1kf5jmx26qr"]
 
-[ext_resource type="Script" uid="uid://ccc5jbwxnfxu" path="res://dialogue_player.gd" id="1_nqtrn"]
+[ext_resource type="Script" uid="uid://ccc5jbwxnfxu" path="res://src/UI/dialogue_player.gd" id="1_nqtrn"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ixsxa"]
 
