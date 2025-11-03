@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cf354xjb42m28"]
+
+[ext_resource type="PackedScene" uid="uid://cmb1o47l73yc6" path="res://src/Generics/Level_Generic.tscn" id="1_ia82l"]
+[ext_resource type="PackedScene" uid="uid://boxnfi65tmbmn" path="res://src/Generics/push_block_generic.tscn" id="2_23d56"]
+[ext_resource type="PackedScene" uid="uid://d0hj0ni7pb4b1" path="res://src/Agents/old_body.tscn" id="3_negae"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_negae"]
+size = Vector2(81, 8)
+
+[node name="world" instance=ExtResource("1_ia82l")]
+
+[node name="CollisionPolygon2D" parent="StaticBody2D" index="0"]
+polygon = PackedVector2Array(1, 64, 1, 136, 57, 136, 57, 168, 137, 168, 137, 120, 169, 120, 169, 128, 225, 128, 225, 168, 313, 168, 313, 128, 329, 128, 329, 168, 513, 168, 513, 0, 553, 0, 553, 208, -47, 208, -47, 64)
+
+[node name="Player" parent="." index="1"]
+position = Vector2(-24, 40)
+
+[node name="PushBlockGeneric" parent="." index="2" instance=ExtResource("2_23d56")]
+position = Vector2(88, 144)
+
+[node name="Old_Body" parent="." index="3" instance=ExtResource("3_negae")]
+position = Vector2(384, 128)
+
+[node name="PushBlockGeneric2" parent="." index="4" instance=ExtResource("2_23d56")]
+position = Vector2(200, 104)
+
+[node name="Area2D" type="Area2D" parent="." index="5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(95.5, 164)
+shape = SubResource("RectangleShape2D_negae")

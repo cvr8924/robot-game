@@ -45,7 +45,7 @@ position = Vector2(128, 144)
 position = Vector2(128, 128)
 
 [node name="PushBlockGeneric9" parent="." index="12" instance=ExtResource("2_pbxmf")]
-position = Vector2(128, 112)
+position = Vector2(227, 138)
 
 [node name="PushBlockGeneric10" parent="." index="13" instance=ExtResource("2_pbxmf")]
 position = Vector2(144, 160)

@@ -6,7 +6,7 @@
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_o7rrm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cdv75"]
-size = Vector2(1.9329445, 1.9416125)
+size = Vector2(2.468885, 2.093476)
 
 [node name="PushBlockGeneric" type="RigidBody2D" groups=["Pushable"]]
 collision_layer = 5
@@ -19,8 +19,8 @@ max_contacts_reported = 8
 script = ExtResource("1_cdv75")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(8, 8)
-scale = Vector2(16, 16)
+position = Vector2(10, 8.5)
+scale = Vector2(20, 17)
 texture = SubResource("PlaceholderTexture2D_o7rrm")
 
 [node name="Hurtbox" type="Area2D" parent="."]
@@ -30,7 +30,7 @@ script = ExtResource("2_ptpun")
 metadata/_custom_type_script = "uid://w5dyn1v0hhcx"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
-position = Vector2(7.9806986, 8.018641)
+position = Vector2(10, 8.457665)
 scale = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_cdv75")
 

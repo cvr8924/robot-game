@@ -1,60 +1,60 @@
 [gd_scene load_steps=27 format=3 uid="uid://b75lc62e8tfah"]
 
-[ext_resource type="Script" uid="uid://dco12sn18mx3w" path="res://src/Agents/player.gd" id="1_onrkg"]
-[ext_resource type="Resource" uid="uid://lgfv5cq42ivt" path="res://src/Agents/DefaultMovementData.tres" id="2_i3pqv"]
-[ext_resource type="Texture2D" uid="uid://dxi7dwr3lbl1a" path="res://assets/Player Sprites 2.png" id="3_i3pqv"]
-[ext_resource type="Script" uid="uid://baaqm0rva0i13" path="res://src/Generics/Hitbox.gd" id="4_hqtel"]
-[ext_resource type="Script" uid="uid://w5dyn1v0hhcx" path="res://src/Generics/Hurtbox.gd" id="5_sweqy"]
+[ext_resource type="Script" uid="uid://dco12sn18mx3w" path="res://src/Agents/player.gd" id="1_vtnjw"]
+[ext_resource type="Resource" uid="uid://lgfv5cq42ivt" path="res://src/Agents/DefaultMovementData.tres" id="2_qd4os"]
+[ext_resource type="Script" uid="uid://baaqm0rva0i13" path="res://src/Generics/Hitbox.gd" id="3_n6flg"]
+[ext_resource type="Texture2D" uid="uid://dxi7dwr3lbl1a" path="res://assets/Player Sprites 2.png" id="4_kyfb7"]
+[ext_resource type="Script" uid="uid://w5dyn1v0hhcx" path="res://src/Generics/Hurtbox.gd" id="5_qq47b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
 size = Vector2(10.501785, 6.533171)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
-atlas = ExtResource("3_i3pqv")
+atlas = ExtResource("4_kyfb7")
 region = Rect2(0, 294, 291, 294)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sweqy"]
-atlas = ExtResource("3_i3pqv")
+atlas = ExtResource("4_kyfb7")
 region = Rect2(291, 294, 291, 294)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2hs0m"]
-atlas = ExtResource("3_i3pqv")
+atlas = ExtResource("4_kyfb7")
 region = Rect2(582, 294, 291, 294)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1jxqw"]
-atlas = ExtResource("3_i3pqv")
+atlas = ExtResource("4_kyfb7")
 region = Rect2(873, 294, 291, 294)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dw050"]
-atlas = ExtResource("3_i3pqv")
+atlas = ExtResource("4_kyfb7")
 region = Rect2(0, 0, 291, 294)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b26j0"]
-atlas = ExtResource("3_i3pqv")
+atlas = ExtResource("4_kyfb7")
 region = Rect2(1746, 0, 291, 294)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n7ghd"]
-atlas = ExtResource("3_i3pqv")
+atlas = ExtResource("4_kyfb7")
 region = Rect2(291, 0, 291, 294)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nvl01"]
-atlas = ExtResource("3_i3pqv")
+atlas = ExtResource("4_kyfb7")
 region = Rect2(582, 0, 291, 294)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ivps1"]
-atlas = ExtResource("3_i3pqv")
+atlas = ExtResource("4_kyfb7")
 region = Rect2(873, 0, 291, 294)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_urp6f"]
-atlas = ExtResource("3_i3pqv")
+atlas = ExtResource("4_kyfb7")
 region = Rect2(1164, 0, 291, 294)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bwjto"]
-atlas = ExtResource("3_i3pqv")
+atlas = ExtResource("4_kyfb7")
 region = Rect2(1455, 0, 291, 294)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_606se"]
-atlas = ExtResource("3_i3pqv")
+atlas = ExtResource("4_kyfb7")
 region = Rect2(0, 0, 291, 294)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nvl01"]
@@ -196,14 +196,14 @@ height = 18.650291
 collision_layer = 3
 floor_constant_speed = true
 floor_snap_length = 2.0
-script = ExtResource("1_onrkg")
-movement_data = ExtResource("2_i3pqv")
+script = ExtResource("1_vtnjw")
+movement_data = ExtResource("2_qd4os")
 max_health = 5
 
 [node name="Hitbox2" type="Area2D" parent="."]
 collision_layer = 8
 collision_mask = 8
-script = ExtResource("4_hqtel")
+script = ExtResource("3_n6flg")
 metadata/_custom_type_script = "uid://baaqm0rva0i13"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox2"]
@@ -235,7 +235,7 @@ one_shot = true
 [node name="Hitbox" type="Area2D" parent="."]
 collision_layer = 8
 collision_mask = 8
-script = ExtResource("4_hqtel")
+script = ExtResource("3_n6flg")
 metadata/_custom_type_script = "uid://baaqm0rva0i13"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
@@ -265,7 +265,7 @@ shape = SubResource("RectangleShape2D_sweqy")
 position = Vector2(20, 10.217)
 collision_layer = 8
 collision_mask = 8
-script = ExtResource("5_sweqy")
+script = ExtResource("5_qq47b")
 metadata/_custom_type_script = "uid://w5dyn1v0hhcx"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
