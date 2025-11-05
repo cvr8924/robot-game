@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxijrdfttn2ly"]
+
+[ext_resource type="Script" uid="uid://dvd1xr42mgiel" path="res://src/Generics/kill_plane.gd" id="1_nj6os"]
+
+[node name="kill_plane" type="Area2D"]
+script = ExtResource("1_nj6os")
+metadata/_custom_type_script = "uid://dvd1xr42mgiel"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,4 +1,4 @@
-extends Area2D
+class_name kill_plane extends Area2D
 
 
 # Called when the node enters the scene tree for the first time.

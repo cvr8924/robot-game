@@ -1,31 +1,95 @@
-[gd_scene load_steps=5 format=3 uid="uid://cf354xjb42m28"]
+[gd_scene load_steps=6 format=3 uid="uid://cf354xjb42m28"]
 
 [ext_resource type="PackedScene" uid="uid://cmb1o47l73yc6" path="res://src/Generics/Level_Generic.tscn" id="1_ia82l"]
 [ext_resource type="PackedScene" uid="uid://boxnfi65tmbmn" path="res://src/Generics/push_block_generic.tscn" id="2_23d56"]
-[ext_resource type="PackedScene" uid="uid://d0hj0ni7pb4b1" path="res://src/Agents/old_body.tscn" id="3_negae"]
+[ext_resource type="PackedScene" uid="uid://cxijrdfttn2ly" path="res://kill_plane.tscn" id="4_hma6q"]
+[ext_resource type="Script" uid="uid://pxtdiglf845p" path="res://src/Generics/level_geometry.gd" id="5_c7lld"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_negae"]
-size = Vector2(81, 8)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c7lld"]
+size = Vector2(481.8125, 13)
 
 [node name="world" instance=ExtResource("1_ia82l")]
 
 [node name="CollisionPolygon2D" parent="StaticBody2D" index="0"]
-polygon = PackedVector2Array(1, 64, 1, 136, 57, 136, 57, 168, 137, 168, 137, 120, 169, 120, 169, 128, 225, 128, 225, 168, 313, 168, 313, 128, 329, 128, 329, 168, 513, 168, 513, 0, 553, 0, 553, 208, -47, 208, -47, 64)
+polygon = PackedVector2Array(1, 64, 1, 136, 57, 136, 57, 168, 137, 168, 137, 120, 169, 120, 169, 128, 225, 128, 225, 168, 313, 168, 313, 128, 361, 128, 361, 168, 513, 168, 513, 128, 553, 128, 553, 208, -47, 208, -47, 64)
 
 [node name="Player" parent="." index="1"]
-position = Vector2(-24, 40)
+position = Vector2(-32, 40)
 
 [node name="PushBlockGeneric" parent="." index="2" instance=ExtResource("2_23d56")]
-position = Vector2(88, 144)
+position = Vector2(88, 151)
 
-[node name="Old_Body" parent="." index="3" instance=ExtResource("3_negae")]
-position = Vector2(384, 128)
+[node name="PushBlockGeneric2" parent="." index="3" instance=ExtResource("2_23d56")]
+position = Vector2(168, 64)
 
-[node name="PushBlockGeneric2" parent="." index="4" instance=ExtResource("2_23d56")]
-position = Vector2(200, 104)
+[node name="kill_plane" parent="." index="4" instance=ExtResource("4_hma6q")]
 
-[node name="Area2D" type="Area2D" parent="." index="5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="kill_plane" index="0"]
+position = Vector2(279.09375, 165)
+shape = SubResource("RectangleShape2D_c7lld")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
-position = Vector2(95.5, 164)
-shape = SubResource("RectangleShape2D_negae")
+[node name="StaticBody2D2" type="StaticBody2D" parent="." index="5"]
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2" index="0"]
+position = Vector2(-24, 8)
+polygon = PackedVector2Array(176, 72, 216, 72, 216, 80, 176, 80)
+script = ExtResource("5_c7lld")
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D2/CollisionPolygon2D" index="0"]
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." index="6"]
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3" index="0"]
+position = Vector2(-80, -24)
+polygon = PackedVector2Array(176, 72, 216, 72, 216, 80, 204.34317, 80, 176, 80)
+script = ExtResource("5_c7lld")
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D3/CollisionPolygon2D" index="0"]
+
+[node name="Ceiling Static" type="StaticBody2D" parent="." index="7"]
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ceiling Static" index="0"]
+position = Vector2(-216, -56)
+polygon = PackedVector2Array(168, -48, 216, -48, 768, -48, 768, -40, 768, 136, 776, 136, 776, 192, 768, 192, 768, 144, 728, 144, 728, -32, 216, -32, 216, 8, 256, 8, 256, 24, 216, 24, 216, 80, 168, 80, 168, 128, 160, 128, 160, 64, 168, 64)
+script = ExtResource("5_c7lld")
+
+[node name="Polygon2D" type="Polygon2D" parent="Ceiling Static/CollisionPolygon2D" index="0"]
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." index="8"]
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D4" index="0"]
+position = Vector2(-16, -48)
+polygon = PackedVector2Array(176, 72, 186.5477, 71.99999, 216, 72, 216, 80, 176, 80)
+script = ExtResource("5_c7lld")
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D4/CollisionPolygon2D" index="0"]
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="." index="9"]
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D5" index="0"]
+position = Vector2(-80, -72)
+polygon = PackedVector2Array(176, 72, 216, 72, 216, 80, 176, 80)
+script = ExtResource("5_c7lld")
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D5/CollisionPolygon2D" index="0"]
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="." index="10"]
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D6" index="0"]
+position = Vector2(-128, -96)
+polygon = PackedVector2Array(176, 72, 216, 72, 216, 80, 176, 80)
+script = ExtResource("5_c7lld")
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D6/CollisionPolygon2D" index="0"]
+
+[node name="PushBlockGeneric3" parent="." index="11" instance=ExtResource("2_23d56")]
+position = Vector2(96, 32)
+
+[node name="PushBlockGeneric4" parent="." index="12" instance=ExtResource("2_23d56")]
+position = Vector2(48, -40)
