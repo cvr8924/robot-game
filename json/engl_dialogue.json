@@ -12,5 +12,12 @@
 	],
 	"S0Breakable": [
         "This object seems breakable"
+	],
+	"S1Terminal": [
+		"This Terminal Has a helpful hint",
+		"and an item!"
+	],
+	"S1TerminalUsed":[
+		"This Terminal has already been used"
 	]
 }

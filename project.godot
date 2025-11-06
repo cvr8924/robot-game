@@ -19,6 +19,7 @@ config/icon="res://assets/icon.svg"
 
 Events="*res://src/Singleton/Events.gd"
 DialogueSignalBus="*res://src/Singleton/dialogue_signal_bus.gd"
+Flags="*res://src/Singleton/flags.gd"
 
 [display]
 
