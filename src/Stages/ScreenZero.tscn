@@ -16,6 +16,7 @@ size = Vector2(20, 42)
 size = Vector2(26, 30.5)
 
 [node name="World" instance=ExtResource("1_wja56")]
+position = Vector2(1, 0)
 
 [node name="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 polygon = PackedVector2Array(1, 184, 1, 0, 25, 0, 25, 96, 89, 96, 89, 128, 289, 128, 289, 0, 321, 0, 321, 184)
@@ -31,9 +32,9 @@ position = Vector2(56, 80)
 shape = SubResource("RectangleShape2D_fhtx4")
 
 [node name="Label" type="Label" parent="Printer DA" index="2"]
-offset_left = 32.0
+offset_left = 31.0
 offset_top = 40.0
-offset_right = 86.0
+offset_right = 85.0
 offset_bottom = 104.0
 text = "Printer"
 autowrap_mode = 1
